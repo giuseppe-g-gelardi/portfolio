@@ -1,13 +1,11 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
 import { Link } from 'react-router-dom';
+import './styles/nav.css'
 
 export default function Navigation() {
   return(
       <nav id="mainNavbar" className="navbar navbar-dark bg-dark navbar-expand-md">
-         <Link to="/" className='navbar-brand'>Hello...</Link>
+         <Link to="/" id="brand" className='navbar-brand'>Giuseppe Gelardi</Link>
 
           <button className="navbar-toggler" 
                   data-toggle="collapse" 
