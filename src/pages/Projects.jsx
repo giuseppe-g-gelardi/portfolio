@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-// import SyntaxHighlighter from 'react-syntax-highlighter';
 import axios from 'axios';
-// import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
-import { Table } from '@dracula/dracula-ui';
+import { Table, Box, Anchor, Text, Heading, Card } from '@dracula/dracula-ui';
+import { Link } from 'react-router-dom';
+import './styles/Projects.css'
 
 export default function Projects() {
 
@@ -16,7 +16,6 @@ export default function Projects() {
       axios.get('https://api.github.com/users/giuseppe-g-gelardi/repos').then(
         response => {
           setArrayItems(response.data)
-          // console.log(arrayItems)
         },
         err => {
           console.log(err)
@@ -27,25 +26,40 @@ export default function Projects() {
     }
   }
 
-
-  // console.log(arrayItems)
-
-  // console.log(arrayItems[1].name)
-  // console.log(arrayItems[1].url)
-  // console.log(arrayItems[1].commits_url)
+  // const dracColors = ['cyan', 'green', 'orange', 'pink', 'purple', 'red', 'yellow', 'white']
+  // function displayColor(colors) {
+  //   colors.map((color) => {
+  //     return color
+  //   })
     
-  
-  
+  // }
+ 
 
-  
+  // const dracHoverColors = [
+  //   'purpleCyan', 'yellowPink', 'cyanGreen', 'pinkPurple'
+  // ]
+  // function displayHoverColors(colors) {
+  //   colors.map((color) => {
+  //     return color
+  //   })
+  // }
 
   return (
-    <div>
-      <Table>
+    <>
+    <Box align='center' p='lg'>
+      <Heading>
+        Here are some of my projects
+      </Heading>
+    </Box>
+      {/* <Box align='center' p='md' scrollbar='purple' height='md' width='4xl' display='inline-block'> */}
+      <Card as='div' variant='subtle' scrollbar='purple' height='md'>
+      <Table  variant='striped'>
         <thead>
           <tr>
-            <th className="drac-text drac-text-white">Repo Name</th>
-            <th className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
+            <th className="drac-text drac-text-white">
+              Repo Name
+            </th>
+            <th className="drac-text drac-text-white" >
               Link
             </th>
           </tr>
@@ -54,68 +68,28 @@ export default function Projects() {
           {arrayItems.map((val, key) => {
             return (
               <tr key={key}>
-                <td className="drac-text drac-text-white">{val.name}</td>
-                <td className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
-                {val.url} 
+                <td 
+                  className="drac-text drac-text-white">
+                    <Text color='cyanGreen'>{val.name}</Text>
+                </td>
+                <td 
+                  className="drac-text drac-text-white" >
+                  <Link 
+                  style={{textDecoration: 'none'}}>
+                    <Anchor color='yellowPink'
+                      className='project-links'
+                      hoverColor='pinkPurple'>{val.url}</Anchor>
+                  </Link>
                 </td>
               </tr>
 
             )
           })}
-          
-          <tr>
-        
-          </tr>
-          <tr>
-      
-          </tr>
-          <tr>
-       
-          </tr>
         </tbody>
       </Table>
-    </div>
+      </Card>
+
+      {/* </Box> */}
+    </>
    );
 }
-
-
-
-
-
-
-{/* <Table>
-        <thead>
-          <tr>
-            <th className="drac-text drac-text-white">Repo Name</th>
-            <th className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
-              Link
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="drac-text drac-text-white">{arrayItems[0].name}</td>
-            <td className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
-            {arrayItems[0].url} 
-            </td>
-          </tr>
-          <tr>
-            <td className="drac-text drac-text-white">Nadja</td>
-            <td className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
-              Nadja was very disadvantaged during her human life. 
-            </td>
-          </tr>
-          <tr>
-            <td className="drac-text drac-text-white">Laszlo</td>
-            <td className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
-              As a human, 
-            </td>
-          </tr>
-          <tr>
-            <td className="drac-text drac-text-white">Colin</td>
-            <td className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
-              As an energy vampire, 
-            </td>
-          </tr>
-        </tbody>
-      </Table> */}
