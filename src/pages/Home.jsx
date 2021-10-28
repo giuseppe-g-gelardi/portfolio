@@ -9,11 +9,9 @@ export default function Home() {
     <>
       <Box id='pageHeading'  width="auto">
         <Box align='center'>
-          <Avatar
-            align='center'
-            title="headshot"
-            src={headshot}
-          />
+          <div className='circular-landscape'>
+            <img src={headshot} alt=''/>
+          </div>
         </Box>
         
         <Divider />
