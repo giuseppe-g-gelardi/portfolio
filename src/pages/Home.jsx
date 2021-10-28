@@ -1,16 +1,24 @@
 import React from 'react';
 import './styles/Home.css'
-import { Heading, Box, Divider, Button } from '@dracula/dracula-ui';
-import { Link } from 'react-router-dom';
+import { Heading, Box, Divider, Avatar } from '@dracula/dracula-ui';
+import headshot from '../images/headshot.jpg'
 
 export default function Home() {
 
   return(
     <>
       <Box id='pageHeading'  width="auto">
+        <Box align='center'>
+          <Avatar
+            align='center'
+            title="headshot"
+            src={headshot}
+          />
+        </Box>
+        
         <Divider />
-          <Heading color="purpleCyan" size='2xl' align='center'>Hello, World!</Heading> 
-          <Heading color="yellowPink" size='2xl' align='center'>I'm Giuseppe Gelardi   </Heading>
+          <Heading color="purpleCyan" size='2xl' align='center'>{'>_ '}Hello, World!</Heading> 
+          <Heading color="yellowPink" size='xl' align='center' p='xs'>I'm Giuseppe Gelardi   </Heading>
         <Divider />
           <Heading color="pink" size='xl' align='left' m="xs" p="sm">I'm a full-stack software developer</Heading>
           <Heading color="purple" size='xl' align='right' p="sm">And an industrial engineer</Heading>
