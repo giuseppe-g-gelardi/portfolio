@@ -3,7 +3,7 @@ import './styles/Home.css'
 import { Heading, Box, Divider } from '@dracula/dracula-ui';
 import headshot from '../images/headshot.jpg'
 
-export default function Home() {
+export default function Home(props) {
   return(
     <>
       <Box id='pageHeading'  width="auto">

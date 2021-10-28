@@ -9,7 +9,7 @@ import Projects from './pages/Projects'
 import Footer from './components/Footer';
 import './App.css'
 
-function App() {
+export default function App() {
   return(
   <>
     <Router>
@@ -25,5 +25,3 @@ function App() {
   </>
   )
 }
-
-export default App
