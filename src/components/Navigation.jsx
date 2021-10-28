@@ -1,18 +1,14 @@
 import React from 'react';
 import { Anchor } from '@dracula/dracula-ui'
 import { Link } from 'react-router-dom';
-
 import './styles/nav.css'
 
-
-// bg-dark
 export default function Navigation() {
   return(
       <nav id="mainNavbar" 
       className="navbar navbar-dark bgdrac navbar-expand-md py-4">
         <Link to='/portfolio' style={{textDecoration: "none"}}>
           <Anchor 
-            // href="/portfolio" 
             id="brand" 
             className='navbar-brand' 
             weight="semibold" 
@@ -36,7 +32,6 @@ export default function Navigation() {
               <li className='nav-item' id='nav-item-about'>
                 <Link to='/about' style={{textDecoration: "none"}}>
                   <Anchor 
-                    // href='/about' 
                     className='nav-link active'
                     hoverColor='pinkPurple'>
                       About
@@ -47,7 +42,6 @@ export default function Navigation() {
               <li className='nav-item' id='nav-item-projects'>
                 <Link to='/projects' style={{textDecoration: "none"}}>
                   <Anchor 
-                    // href='/projects' 
                     className='nav-link active'
                     hoverColor='purpleCyan'>
                       Projects
