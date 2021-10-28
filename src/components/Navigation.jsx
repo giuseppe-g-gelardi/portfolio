@@ -6,14 +6,14 @@ import './styles/nav.css'
 // bg-dark
 export default function Navigation() {
   return(
-      <nav id="mainNavbar" className="navbar navbar-dark bgdrac navbar-expand-md py-4" 
-      >
+      <nav id="mainNavbar" 
+      className="navbar navbar-dark bgdrac navbar-expand-md py-4">
          <Link to="/portfolio" id="brand" className='navbar-brand'>Giuseppe Gelardi</Link>
 
           <button className="navbar-toggler" 
                   data-toggle="collapse" 
                   data-target="#navLinks">
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon" />
           </button>
 
 
