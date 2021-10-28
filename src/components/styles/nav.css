@@ -1,11 +1,29 @@
+.bgdrac {
+  background: #282a36;
+}
+
+#mainNavbar .nav-link:hover {
+  color: #bd93f9;
+}
+
+#mainNavbar .navbar-brand:hover {
+  color: #ff79c6;
+}
+
+.navbar-toggler {
+  margin-right: 1rem;
+}
+
 .navbar-nav {
   margin-left:auto;
   padding-right: 2rem;
   padding-left: 2rem;
+
 }
 
 .navbar-nav > li{
   padding-right:30px;
+
 }
 
 .navlink :active {

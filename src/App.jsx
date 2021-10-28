@@ -15,7 +15,7 @@ return(
     <Router>
       <Navigation />
         <Switch>
-          <Route path='/' exact component={Home} />
+          <Route path='/portfolio' exact component={Home} />
           <Route path='/about' exact component={About} />
           <Route path='/projects' exact component={Projects} />
           <Route path='/contact' exact component={Contact} />
