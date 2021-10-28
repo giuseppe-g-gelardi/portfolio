@@ -1,5 +1,7 @@
 import React from 'react';
-import { Anchor } from '@dracula/dracula-ui';
+import { Anchor } from '@dracula/dracula-ui'
+import { Link } from 'react-router-dom';
+
 import './styles/nav.css'
 
 
@@ -8,15 +10,17 @@ export default function Navigation() {
   return(
       <nav id="mainNavbar" 
       className="navbar navbar-dark bgdrac navbar-expand-md py-4">
-        <Anchor 
-          href="/portfolio" 
-          id="brand" 
-          className='navbar-brand' 
-          weight="semibold" 
-          size="lg"
-          hoverColor='yellowPink'>
-            {'>_ '}Giuseppe Gelardi
-        </Anchor>
+        <Link to='/portfolio' style={{textDecoration: "none"}}>
+          <Anchor 
+            // href="/portfolio" 
+            id="brand" 
+            className='navbar-brand' 
+            weight="semibold" 
+            size="lg"
+            hoverColor='yellowPink'>
+              {'>_ '}Giuseppe Gelardi
+          </Anchor>
+        </Link>
 
           <button 
             className="navbar-toggler" 
@@ -30,30 +34,36 @@ export default function Navigation() {
             <ul className="navbar-nav">
 
               <li className='nav-item' id='nav-item-about'>
-                <Anchor 
-                  href='/about' 
-                  className='nav-link active'
-                  hoverColor='pinkPurple'>
-                    About
-                </Anchor>
+                <Link to='/about' style={{textDecoration: "none"}}>
+                  <Anchor 
+                    // href='/about' 
+                    className='nav-link active'
+                    hoverColor='pinkPurple'>
+                      About
+                  </Anchor>
+                </Link>
               </li>
        
               <li className='nav-item' id='nav-item-projects'>
-                <Anchor 
-                  href='/projects' 
-                  className='nav-link active'
-                  hoverColor='purpleCyan'>
-                    Projects
-                </Anchor>
+                <Link to='/projects' style={{textDecoration: "none"}}>
+                  <Anchor 
+                    // href='/projects' 
+                    className='nav-link active'
+                    hoverColor='purpleCyan'>
+                      Projects
+                  </Anchor>
+                </Link>
               </li>
 
               <li className='nav-item' id='nav-item-contact'>
-                <Anchor 
-                  href='/contact' 
-                  className='nav-link active'
-                  hoverColor='cyanGreen'>
-                    Contact
-                </Anchor>
+                <Link to='/contact' style={{textDecoration: "none"}}>
+                  <Anchor 
+                    // href='/contact' 
+                    className='nav-link active'
+                    hoverColor='cyanGreen'>
+                      Contact
+                  </Anchor>
+                </Link>
               </li>
 
             </ul>
