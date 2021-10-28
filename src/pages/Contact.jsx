@@ -1,9 +1,18 @@
 import React from 'react';
+import { 
+  AiFillGithub, 
+  AiOutlineInstagram, 
+  AiFillFacebook, 
+  AiOutlineLinkedin
+  } from 'react-icons/ai'
 
 export default function Contact() {
   return(
     <>
-      <h1>Contact page bruv</h1>
+      <AiFillGithub size={70}/>
+      <AiOutlineInstagram size={70} />
+      <AiFillFacebook size={70} />
+      <AiOutlineLinkedin size={70} />
     </>
   )
 }
