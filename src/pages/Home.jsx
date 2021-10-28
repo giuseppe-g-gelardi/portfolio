@@ -14,7 +14,7 @@ export default function Home() {
             </div>
           </Box>
         <Divider />
-          <Heading color="purpleCyan" size='2xl' align='center'>{'>_ '}Hello, World!</Heading> 
+          <Heading color="purpleCyan" size='2xl' align='center'>Hello, World!</Heading> 
           <Heading color="yellowPink" size='xl' align='center' p='xs'>I'm Giuseppe Gelardi   </Heading>
         <Divider />
           <Heading color="pink" size='xl' align='left' m="xs" p="sm">I'm a full-stack software developer</Heading>

@@ -2,16 +2,6 @@
   background: #282a36;
 }
 
-#mainNavbar .nav-link:hover {
-  color: #bd93f9;
-}
-
-#mainNavbar .navbar-brand:hover {
-  color: #ff79c6;
-}
-
-
-
 .navbar-toggler {
   margin-right: 1rem;
 }
@@ -34,17 +24,5 @@
 
 #brand {
   margin-left:1rem;
-  color: #8be9fd;
 }
 
-/* #mainNavbar #navLinks #nav-item-about {
-  color: #f1fa8c
-}
-
-#nav-item-projects {
-  color: #ffb86c
-}
-
-#nav-item-contact {
-  color: #ff79c6
-} */
