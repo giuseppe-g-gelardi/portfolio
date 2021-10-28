@@ -1,15 +1,84 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+// import SyntaxHighlighter from 'react-syntax-highlighter';
+import axios from 'axios';
+// import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { Table } from '@dracula/dracula-ui';
 
 export default function Projects() {
-  return(
-    <>
-      <div align='center'>
-        <h1>Projects page bruv</h1>
-        <p>talking about keyboard projects and programming projects</p>
-        <p>format the page: project left, description on right and alternate.</p>
-        <p>programming first</p>
-        <p>compress to column for mobile</p>
-      </div>
-    </>
-  )
+
+  const [arrayItems, setArrayItems] = useState([]);
+
+  useEffect(() => {
+    getRepos()
+  }, [])
+    // axios.get(`https://api.github.com/users/giuseppe-g-gelardi/repos`
+  const getRepos = async () => {
+    try {
+      axios.get('https://api.github.com/users/giuseppe-g-gelardi/repos').then(
+        response => {
+          setArrayItems(response.data)
+          console.log(arrayItems)
+        },
+        err => {
+          console.log(err)
+        }
+      )
+    } catch (except) {
+      console.log(except)
+    }
+  }
+
+
+  // console.log(arrayItems)
+
+  // console.log(arrayItems[1].name)
+  // console.log(arrayItems[1].url)
+  // console.log(arrayItems[1].commits_url)
+    
+  
+  
+
+  
+
+  return (
+    <div>
+      <h1>projektz</h1>
+      <Table>
+        <thead>
+          <tr>
+            <th className="drac-text drac-text-white">Repo Name</th>
+            <th className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
+              Link
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="drac-text drac-text-white">{arrayItems[1].name}</td>
+            <td className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
+            {arrayItems[1].url} 
+            </td>
+          </tr>
+          <tr>
+            <td className="drac-text drac-text-white">Nadja</td>
+            <td className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
+              Nadja was very disadvantaged during her human life. 
+            </td>
+          </tr>
+          <tr>
+            <td className="drac-text drac-text-white">Laszlo</td>
+            <td className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
+              As a human, 
+            </td>
+          </tr>
+          <tr>
+            <td className="drac-text drac-text-white">Colin</td>
+            <td className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
+              As an energy vampire, 
+            </td>
+          </tr>
+        </tbody>
+      </Table>
+    </div>
+   );
 }
