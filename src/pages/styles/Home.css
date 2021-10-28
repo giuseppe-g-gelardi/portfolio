@@ -1,0 +1,5 @@
+#pageHeading  {
+    display: grid;
+    place-content: center;
+    margin-top: 10%;
+}
