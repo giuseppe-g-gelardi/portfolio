@@ -11,13 +11,12 @@ export default function Projects() {
   useEffect(() => {
     getRepos()
   }, [])
-    // axios.get(`https://api.github.com/users/giuseppe-g-gelardi/repos`
   const getRepos = async () => {
     try {
       axios.get('https://api.github.com/users/giuseppe-g-gelardi/repos').then(
         response => {
           setArrayItems(response.data)
-          console.log(arrayItems)
+          // console.log(arrayItems)
         },
         err => {
           console.log(err)
@@ -42,7 +41,6 @@ export default function Projects() {
 
   return (
     <div>
-      <h1>projektz</h1>
       <Table>
         <thead>
           <tr>
@@ -53,10 +51,52 @@ export default function Projects() {
           </tr>
         </thead>
         <tbody>
+          {arrayItems.map((val, key) => {
+            return (
+              <tr key={key}>
+                <td className="drac-text drac-text-white">{val.name}</td>
+                <td className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
+                {val.url} 
+                </td>
+              </tr>
+
+            )
+          })}
+          
           <tr>
-            <td className="drac-text drac-text-white">{arrayItems[1].name}</td>
+        
+          </tr>
+          <tr>
+      
+          </tr>
+          <tr>
+       
+          </tr>
+        </tbody>
+      </Table>
+    </div>
+   );
+}
+
+
+
+
+
+
+{/* <Table>
+        <thead>
+          <tr>
+            <th className="drac-text drac-text-white">Repo Name</th>
+            <th className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
+              Link
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="drac-text drac-text-white">{arrayItems[0].name}</td>
             <td className="drac-text drac-text-white" style={{ maxWidth: 200 }}>
-            {arrayItems[1].url} 
+            {arrayItems[0].url} 
             </td>
           </tr>
           <tr>
@@ -78,7 +118,4 @@ export default function Projects() {
             </td>
           </tr>
         </tbody>
-      </Table>
-    </div>
-   );
-}
+      </Table> */}
