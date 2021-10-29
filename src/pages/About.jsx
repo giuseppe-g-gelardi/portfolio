@@ -6,13 +6,13 @@ import sniperschool from '../images/sniperschool.jpg'
 
 export default function About() {
   return (
-    <Container fluid='md' justify >
-      <Row className='justify-content-center' xs={{ order: 'last'}}>
-        <Col >
+    <Container fluid='md' justify className='about-container'>
+      <Row className='justify-content-center' >
+        <Col md='4'>
           <Image src={portrait} fluid />
         </Col>
 
-        <Col >
+        <Col md={{ span: 4, offset: 4 }}>
           
           <div id='about-right' className='col-lg-12 text-center' justify='center'>
             <Heading>Hi! My name is Giuseppe</Heading>
@@ -27,8 +27,8 @@ export default function About() {
           </div>
         </Col>
       </Row>
-      <Row className='justify-content-center' xs={{ order: 'first'}}>
-        <Col>
+      <Row className='justify-content-center' >
+        <Col md={4}>
           <div id='about-left' className='col-lg-12 text-center'>
             <Heading>Not too long ago though...</Heading>
             <br />
@@ -43,7 +43,7 @@ export default function About() {
           </div>
         </Col>
 
-        <Col>
+        <Col md={{ span: 4, offset: 4 }}>
           <Image src={sniperschool} fluid />
         </Col>
       </Row>
