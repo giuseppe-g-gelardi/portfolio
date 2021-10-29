@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Table, Box, Anchor, Text, Heading, Card } from '@dracula/dracula-ui';
+import { Box, Anchor, Text, Heading, Paragraph } from '@dracula/dracula-ui';
 import { Link } from 'react-router-dom';
 import './styles/Projects.css'
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 
 export default function Projects() {
 
@@ -51,28 +53,27 @@ export default function Projects() {
         Here are some of my projects
       </Heading>
     </Box>
-      {/* <Box align='center' p='md' scrollbar='purple' height='md' width='4xl' display='inline-block'> */}
-      <Card as='div' variant='subtle' scrollbar='purple' height='md'>
-      <Table  variant='striped'>
-        <thead>
-          <tr>
-            <th className="drac-text drac-text-white">
+    <Box scrollbar='purple' height='md' id='table-box'>
+      <Table>
+        <Thead>
+          <Tr>
+            <Th className="drac-text drac-text-white">
               Repo Name
-            </th>
-            <th className="drac-text drac-text-white" >
+            </Th>
+            <Th className="drac-text drac-text-white" >
               Link
-            </th>
-          </tr>
-        </thead>
-        <tbody>
+            </Th>
+          </Tr>
+        </Thead>
+        <Tbody>
           {arrayItems.map((val, key) => {
             return (
-              <tr key={key}>
-                <td 
+              <Tr key={key}>
+                <Td 
                   className="drac-text drac-text-white">
                     <Text color='cyanGreen'>{val.name}</Text>
-                </td>
-                <td 
+                </Td>
+                <Td 
                   className="drac-text drac-text-white" >
                   <Link 
                   style={{textDecoration: 'none'}}>
@@ -80,16 +81,14 @@ export default function Projects() {
                       className='project-links'
                       hoverColor='pinkPurple'>{val.url}</Anchor>
                   </Link>
-                </td>
-              </tr>
+                </Td>
+              </Tr>
 
             )
           })}
-        </tbody>
+        </Tbody>
       </Table>
-      </Card>
-
-      {/* </Box> */}
+      </Box>
     </>
    );
 }
