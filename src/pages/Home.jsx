@@ -18,7 +18,7 @@ export default function Home() {
           <Heading color="yellowPink" size='xl' align='center' p='xs'>I'm Giuseppe Gelardi   </Heading>
         <Divider />
           <Heading color="pink" size='xl' align='left' m="xs" p="sm">I'm a full-stack software developer</Heading>
-          <Heading color="purple" size='xl' align='right' p="sm">And an industrial engineer</Heading>
+          <Heading color="purple" size='xl' align='right' p="sm">...and industrial engineer</Heading>
         <Divider/>
       </Box>
     </>
