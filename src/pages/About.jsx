@@ -1,42 +1,45 @@
 import React from 'react'
+import { Container, Row, Col, Image } from 'react-bootstrap'
+import { Heading, Paragraph } from '@dracula/dracula-ui'
 import portrait from '../images/portrait.jpg'
 import sniperschool from '../images/sniperschool.jpg'
-import { Container, Row, Col, Image } from 'react-bootstrap'
 
 export default function About() {
   return (
-    <Container fluid='md' justify>
-      <Row className='justify-content-center'>
-        <Col>
+    <Container fluid='md' justify >
+      <Row className='justify-content-center' xs={{ order: 'last'}}>
+        <Col >
           <Image src={portrait} fluid />
         </Col>
 
-        <Col>
-          <div id='about-right' className='col-lg-12 text-center'>
-            <h3>Hi! My name is Giuseppe</h3>
+        <Col >
+          
+          <div id='about-right' className='col-lg-12 text-center' justify='center'>
+            <Heading>Hi! My name is Giuseppe</Heading>
             <br />
-            <p>I design high-end custom mechanical keyboards</p>
-            <p>
+            <Paragraph>I design high-end custom mechanical keyboards</Paragraph>
+            <Paragraph>
               Currently I am transitioning to a career in web development and as
               you can see, CSS is the bane of my existence. Good thing I'm still
               really good at designing keyboards! :p
-            </p>
+            </Paragraph>
+
           </div>
         </Col>
       </Row>
-      <Row className='justify-content-center'>
+      <Row className='justify-content-center' xs={{ order: 'first'}}>
         <Col>
           <div id='about-left' className='col-lg-12 text-center'>
-            <h4>Not too long ago though...</h4>
+            <Heading>Not too long ago though...</Heading>
             <br />
-            <p>
+            <Paragraph>
               ... I was in the U.S. Army. I held a few positions like sniper
               team leader, fire-team leader and got to train new solders in
               arctic survival. I was also part of a special recon team that
               everyone was jealous of because we didn't have to shave or wear
               nametags. Although it was fun, I prefer programming and keyboards;
               it's easier on my knees
-            </p>
+            </Paragraph>
           </div>
         </Col>
 
