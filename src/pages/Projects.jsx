@@ -9,13 +9,10 @@ import alice from '../images/keyboards/alice60.png'
 import bolsalice from '../images/keyboards/bolsalice.png'
 import bolsapad from '../images/keyboards/bolsapad.png'
 import deco from '../images/keyboards/deco.png'
-
-import { Container } from 'react-bootstrap'
 import Carousel from 'react-bootstrap/Carousel'
 
 
 export default function Projects() {
-
   const [arrayItems, setArrayItems] = useState([]);
 
   useEffect(() => {
@@ -35,7 +32,6 @@ export default function Projects() {
       console.log(except)
     }
   }
-
 
   return (
     <>
