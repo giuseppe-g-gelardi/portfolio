@@ -102,8 +102,9 @@ export default function Projects() {
           <Divider color="yellow" />
         </Box>
       </Box>
+      <br />
       <Box>
-        <Heading align='center'>
+        <Heading align='center' p='sm'>
           As an industrial engineer, I design custom mechanical keyboards.
         </Heading>
         <Paragraph align='center'>
@@ -111,23 +112,23 @@ export default function Projects() {
         </Paragraph>
       </Box>
 
-      <Box>
-        <Carousel interval={20000}>
+      <Box p='md'>
+        <Carousel interval={20000} m='5'>
           <Carousel.Item>
             <img className='d-dblock w-100' src={alice} alt='' />
-            <Carousel.Caption>
-              <Heading>
-                Calise
-              </Heading>
-              <Paragraph>
-                A 60% Alice style keyboard with smooth cherry lip and 2x 3u spacebars
-              </Paragraph>
-            </Carousel.Caption>
           </Carousel.Item>
 
+          <Carousel.Item>
+            <img className='d-dblock w-100' src={bolsapad} alt='' />
+          </Carousel.Item>
 
+          <Carousel.Item>
+            <img className='d-dblock w-100' src={bolsalice} alt='' />
+          </Carousel.Item>
 
-
+          <Carousel.Item>
+            <img className='d-dblock w-100' src={deco} alt='' />
+          </Carousel.Item>
         </Carousel>
       </Box>
     </>
